@@ -2,7 +2,7 @@
   ansible.builtin.import_role:
       name: common
       tasks_from: app-setup.yaml
-      #tasks_from: nodejs.yaml
+      tasks_from: nodejs.yaml
 
 - name: copy mongo repo
   ansible.builtin.copy:
@@ -22,9 +22,9 @@
   ansible.builtin.shell: mongosh --host {{ MONGODB_HOST }} </app/db/master-data.js
   when: catalogue_output.stdout | int < 0
 
-- name: app setup
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: system-setup.yaml
-  tags:
-  - deployment
+#- name: app setup
+#  ansible.builtin.import_role:
+#    name: common
+ #   tasks_from: system-setup.yaml
+ # tags:
+#  - deployment
