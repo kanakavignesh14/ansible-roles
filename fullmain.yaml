@@ -1,0 +1,14 @@
+- name: {{ componet }}
+  hosts: {{ componet }}
+  become: yes
+  roles:
+  - {{ componet }}
+   
+      
+        
+
+               
+
+
+
+
