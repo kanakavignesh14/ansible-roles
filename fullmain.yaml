@@ -1,8 +1,8 @@
-- name: {{ componet }}
-  hosts: {{ componet }}
+- name: {{ component }}
+  hosts: {{ component }}
   become: yes
   roles:
-  - {{ componet }}
+  - {{ component }}
    
       
         
